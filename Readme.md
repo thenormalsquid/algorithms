@@ -9,4 +9,6 @@ Programming Assignment 1: Percolation Help
 Hard Deadline	 Sun 27 Jul 2014 8:59 PM PDT
 If you submit any time after the hard deadline, you will not receive credit.
 
-- Instructions: https://class.coursera.org/algs4partI-005/assignment/view?assignment_id=1
+- Exercises https://class.coursera.org/algs4partI-005/quiz
+- Programming Assignment: https://class.coursera.org/algs4partI-005/assignment/view?assignment_id=1
+
