@@ -4,6 +4,7 @@
 #read 1.5 and view lectures 1.1 to understand how
 #this works
 
+
 class  UF(object):
     
     def __init__(self, n):
@@ -16,15 +17,15 @@ class  UF(object):
     def find(self, p):
         pass
 
+    def connected(self, p, q):
+        return self.find(p) == self.find(q)
+
     def union(self, p, q):
         pass
     
 
 class QuickFind(UF):
     
-    def connected(self, p, q):
-        return self.find(p) == self.find(q)
-
     def find(self,  p):
         return self.id[p]
 
@@ -41,6 +42,25 @@ class QuickFind(UF):
                     self.id[i] = idq
     
         self.ct -= 1
+
+
+class QuickUnion(UF):
+
+    def find(self, p):
+        while p != self.id[p]:
+            p = self.id[p]
+        return p
+
+    def union(self, p, q):
+        p_root = self.find(p)
+        q_root = self.find(q)
+
+        if p_root == q_root:
+            return
+        self.id[p_root] = q_root
+
+        self.ct -= 1
+
 
 
 
