@@ -67,5 +67,33 @@ class QuickUnion(UF):
         self.ct -= 1
 
 
+class WeightedQuickUnion(UF):
 
+    def __str__(self):
+        return 'WeightedQuickUnion'
 
+    def __init__(self, n):
+        self.sz = range(n)
+        super(WeightedQuickUnion, self).__init__(n)
+
+    def find(self, p):
+        while p != self.id[p]:
+            p = self.id[p]
+        return p
+
+    def union(self, p, q):
+        i = self.find(p)
+        j = self.find(q)
+
+        if i == j:
+            return
+
+        if self.sz[i] < self.sz[j]:
+            self.id[i] = j
+            self.sz[j] += self.sz[i]
+        else:
+            self.id[j] = i
+            self.sz[i] += self.sz[j]
+
+        self.ct -= 1
+        

@@ -1,4 +1,4 @@
-from uf import QuickFind, QuickUnion
+from uf import QuickFind, QuickUnion, WeightedQuickUnion
 
 
 class UFSimulator(object):
@@ -24,7 +24,7 @@ class UFSimulator(object):
 
 if __name__ == '__main__':
 #create instances of the classes here and test with a text file
-    algos = [QuickUnion, QuickFind]
+    algos = [QuickUnion, QuickFind, WeightedQuickUnion]
     ufsimulator = UFSimulator()
 
     for algo in algos:
