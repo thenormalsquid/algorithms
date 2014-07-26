@@ -4,7 +4,6 @@
 #read 1.5 and view lectures 1.1 to understand how
 #this works
 
-
 class  UF(object):
     
     def __init__(self, n):
@@ -26,6 +25,9 @@ class  UF(object):
 
 class QuickFind(UF):
     
+    def __str__(self):
+        return 'QuickFind'
+
     def find(self,  p):
         return self.id[p]
 
@@ -45,6 +47,9 @@ class QuickFind(UF):
 
 
 class QuickUnion(UF):
+
+    def __str__(self):
+        return 'QuickUnion'
 
     def find(self, p):
         while p != self.id[p]:
