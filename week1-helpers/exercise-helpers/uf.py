@@ -33,12 +33,12 @@ class QuickFind(UF):
         idp = self.find(p)
         idq = self.find(q)
 
-        if (not(idp == idq)):
-            for i in self.id:
+        if (idp == idq):
+            return
+        else:
+            for i in xrange(len(self.id)):
                 if(self.id[i] == idp):
                     self.id[i] = idq
-        else:
-            return
     
         self.ct -= 1
 
