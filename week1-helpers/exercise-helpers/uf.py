@@ -35,7 +35,6 @@ class QuickFind(UF):
 
         if (not(idp == idq)):
             for i in self.id:
-                print i
                 if(self.id[i] == idp):
                     self.id[i] = idq
         else:

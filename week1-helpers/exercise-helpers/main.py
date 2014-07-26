@@ -11,7 +11,7 @@ if __name__ == '__main__':
             l = line.split(' ')
             p, q = (int(l[0]), int(l[1]))
             if (qf.connected(p, q)):
-                continue
+                print '%s is connected with %s' % (p, q)
             else:
                 qf.union(p, q)
                 print ' connections: %s %s' % (p, q)
